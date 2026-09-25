@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Перевірка крайових випадків</title>
+    <style>
+      .note::before {
+        content: "<це текст усередині CSS>";
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Коментар із тегами: <div><b>це не розмітка</b></div> -->
+
+    <main
+      id="main"
+      class="content"
+      title="Значення з > усередині"
+      data-single="одинарні лапки"
+      data-unquoted="plain-value"
+      disabled
+      data-empty=""
+    >
+      <h1>Тест атрибутів і тексту</h1>
+
+      <p>Текст перед <strong>вкладеним елементом</strong> і після нього.</p>
+
+      <img src="image.png" alt="Приклад зображення" />
+      <br />
+      <input type="text" disabled />
+
+      <div />
+      Текст після запису з косою рискою.
+
+      <script>
+        const example = "<div>це текст у JavaScript</div>";
+      </script>
+
+      <textarea><b>Це має лишитися текстом</b></textarea>
+
+      <p>Сутність: &amp; та &lt;tag&gt;.</p>
+    </main>
+  </body>
+</html>
